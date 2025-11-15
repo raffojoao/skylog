@@ -19,7 +19,7 @@ O SkyLog funciona como um diário astronômico pessoal, permitindo registrar tud
 
 * Kotlin
 * Jetpack Compose
-* Firebase (Auth e Firestore)
+* Firebase (Auth, Storage e Firestore)
 * MVVM
 
 ---
@@ -43,5 +43,5 @@ The app works like a personal astronomy journal, ideal for noting observed celes
 
 * Kotlin
 * Jetpack Compose
-* Firebase (Auth and Firestore)
+* Firebase (Auth, Storage and Firestore)
 * MVVM
