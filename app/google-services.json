@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "902808563595",
+    "project_id": "skylog-f6b4d",
+    "storage_bucket": "skylog-f6b4d.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:902808563595:android:ddf1ca88aa83bb389dc98e",
+        "android_client_info": {
+          "package_name": "com.example.skylog"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDHfX6V5AEveubHiSOpgBZrrnF0N3mymN8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

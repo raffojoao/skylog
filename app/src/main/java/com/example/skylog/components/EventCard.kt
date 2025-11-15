@@ -20,7 +20,6 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.bumptech.glide.integration.compose.ExperimentalGlideComposeApi
 import com.bumptech.glide.integration.compose.GlideImage
-import com.bumptech.glide.integration.compose.Placeholder
 import com.example.skylog.R
 import com.example.skylog.ui.theme.SkyLogTheme
 
@@ -28,20 +27,23 @@ import com.example.skylog.ui.theme.SkyLogTheme
 @Composable
 fun EventCard(
     modifier: Modifier = Modifier,
-    id: Int,
+    id: String,
     name: String,
-    datetime: String,
+    date: String,
+    time: String,
     image: String?,
     location: String,
-    onEdit: (Int) -> Unit = {},
-    onDelete: (Int) -> Unit = {}
+    onEdit: (String) -> Unit = {},
+    onDelete: (String) -> Unit = {},
+    onClickCard: (String) -> Unit = {}
 ) {
     Card(
         modifier = modifier
             .fillMaxWidth()
             .padding(horizontal = 16.dp, vertical = 8.dp)
             .height(IntrinsicSize.Min),
-        colors = CardDefaults.cardColors(containerColor = Color(0x1B263BFF))
+        colors = CardDefaults.cardColors(containerColor = Color(0x1B263BFF)),
+        onClick = { onClickCard(id) }
     ) {
         Row(
             modifier = Modifier
@@ -92,7 +94,7 @@ fun EventCard(
                     overflow = TextOverflow.Ellipsis
                 )
                 Text(
-                    text = datetime,
+                    text = "$date - $time",
                     color = Color.White,
                     fontSize = 14.sp,
                     maxLines = 1,
@@ -138,9 +140,10 @@ fun EventCardPreview() {
         Scaffold(modifier = Modifier.fillMaxSize()) { innerPadding ->
             EventCard(
                 modifier = Modifier.padding(innerPadding),
-                id = 1,
+                id = "1",
                 name = "Eclipse Lunar",
-                datetime = "12/10/2025 - 22:00",
+                date = "12/10/2025",
+                time = "22:00",
                 location = "Curitiba-PR",
                 onDelete = {},
                 onEdit = {},
